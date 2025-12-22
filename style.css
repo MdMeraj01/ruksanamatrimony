@@ -2436,3 +2436,40 @@ footer {
     }
 }
 
+/* --- Direct Call Button Styling --- */
+.call-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    left: 30px; /* Screen ke Left side par */
+    background-color: #3b82f6; /* Blue Color */
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    animation: floatPulse 2s infinite; /* Wahi pulse effect jo WhatsApp par hai */
+}
+
+.call-float:hover {
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+
+/* Mobile par thoda adjust karo taaki Bottom Nav ke upar aaye */
+@media (max-width: 768px) {
+    .call-float {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 80px; /* Mobile Bottom Nav ke upar */
+        left: 20px;
+    }
+}
